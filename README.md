@@ -11,7 +11,7 @@ A direct replacement for polkit agents utilizing quickshell.
 *No it's not supported on GNOME or KDE since they don't have an implementation for wlr-layer-shell*
 
 5. [Matugen](https://github.com/InioX/matugen) (> v4.x)
-6. XOrg's xhost
+6. XOrg's xhost (yes it's required, because without it, you can't launch stuff)
 
 ## Optional dependencies
 1. Google Sans
