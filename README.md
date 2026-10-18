@@ -11,6 +11,7 @@ A direct replacement for polkit agents utilizing quickshell.
 *No it's not supported on GNOME or KDE since they don't have an implementation for wlr-layer-shell*
 
 5. [Matugen](https://github.com/InioX/matugen) (> v4.x)
+6. XOrg's xhost
 
 ## Optional dependencies
 1. Google Sans
@@ -54,6 +55,16 @@ Singleton {
     readonly property color surfaceContainerHighest: "{{colors.surface_container_highest.default.hex}}"
 }
 ```
+
+## How do I use it?
+### Depending on your window managers configuration files, you can add these specific two lines into your autostart:
+```bash
+qs -c materialpolkit
+xhost +si:localuser:root
+```
+
+> [!NOTE]
+> I **HAD** to have xorg-xhost cause any apps that launched without it will result in `Cannot open display :1` since running an app on root user don't got any access to your user wayland session
 
 **And that's pretty much it, as always, you can report bugs or give out suggestions and I will fix and add them to the next update as fast as possible!**
 
