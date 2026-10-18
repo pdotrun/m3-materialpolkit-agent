@@ -64,7 +64,7 @@ xhost +si:localuser:root
 ```
 
 > [!NOTE]
-> I **HAD** to have xorg-xhost cause any apps that launched without it will result in `Cannot open display :1` since running an app on root user don't got any access to your user wayland session
+> I **HAD** to have xorg-xhost cause any apps (that's running on top of XWayland, which most of them are) that launched without it will result in `Cannot open display :1` since running an app on root user don't got any access to your user wayland session
 
 **And that's pretty much it, as always, you can report bugs or give out suggestions and I will fix and add them to the next update as fast as possible!**
 
